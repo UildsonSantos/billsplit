@@ -107,6 +107,93 @@ class _BillSplitState extends State<BillSplit> {
               value: 12,
               onChanged: (value) {},
             ),
+            const SizedBox(height: 15),
+            Row(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'TIP',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: FloatingActionButton(
+                              backgroundColor: Colors.grey[400],
+                              onPressed: () {},
+                              child: const Icon(
+                                Icons.remove,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            '20',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 27,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: FloatingActionButton(
+                              backgroundColor: Colors.grey[400],
+                              onPressed: () {},
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 15),
+                Container(
+                  width: MediaQuery.of(context).size.width / 3,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        labelText: 'Tax in %',
+                        labelStyle: GoogleFonts.montserrat(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
