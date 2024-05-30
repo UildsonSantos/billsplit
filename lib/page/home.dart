@@ -88,7 +88,25 @@ class _BillSplitState extends State<BillSplit> {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(height: 15),
+            Text(
+              'How many friends?',
+              style: GoogleFonts.montserrat(
+                fontSize: 30,
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            Slider(
+              min: 0,
+              max: 15,
+              divisions: 15,
+              activeColor: Colors.orange,
+              inactiveColor: Colors.grey,
+              value: 12,
+              onChanged: (value) {},
+            ),
           ],
         ),
       ),
